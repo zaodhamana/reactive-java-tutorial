@@ -84,6 +84,9 @@ public class Exercise1 {
     	.map(a -> a.getFirstName())
     	.forEach(a -> System.out.print(a + ", "));
 
+		StreamSources.intNumbersStream()
+		.
+
     }
 
 }
