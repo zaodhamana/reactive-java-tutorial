@@ -84,6 +84,15 @@ public class Exercise1 {
     	.map(a -> a.getFirstName())
     	.forEach(a -> System.out.print(a + ", "));
 
+		System.out.println();
+		System.out.println();
+		System.out.println("Use of flatMap, filter and map");
+		StreamSources.intNumbersStream()
+		.flatMap((id -> StreamSources.userStream().filter(u -> u.getId() == id)))
+		.map(m -> m.getLastName())
+		.forEach(v -> System.out.print(v + ", "));
+
+
     }
 
 }
