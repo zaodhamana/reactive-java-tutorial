@@ -1,5 +1,7 @@
 package io.javabrains.reactiveworkshop;
 
+import java.util.function.Predicate;
+
 /**
  * This class is a sample custom Java type used in the exercises.
  * DO NOT MODIFY THIS CODE
@@ -9,7 +11,7 @@ package io.javabrains.reactiveworkshop;
 
 public class User {
 
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
 
