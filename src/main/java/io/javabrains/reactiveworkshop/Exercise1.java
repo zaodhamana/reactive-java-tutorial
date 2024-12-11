@@ -77,7 +77,7 @@ public class Exercise1 {
     	
     	System.out.println();
     	System.out.println();
-    	System.out.println("Filter using dropwhile of id's don't match numbers in intstream");
+    	System.out.println("Filter using dropwhile if id's don't match numbers in intstream");
     	
     	StreamSources.userStream()
     	.dropWhile(a -> StreamSources.intNumbersStream().anyMatch(i -> i == a.getId()))
