@@ -1,8 +1,5 @@
 package io.javabrains.reactiveworkshop;
 
-import java.util.List;
-import java.util.Optional;
-
 public class Exercise1 {
 
     public static void main(String[] args) {
