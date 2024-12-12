@@ -1,5 +1,8 @@
 package io.javabrains.reactiveworkshop;
 
+import java.util.function.Predicate;
+import java.util.stream.Stream;
+
 public class Exercise1 {
 
     public static void main(String[] args) {
@@ -88,6 +91,20 @@ public class Exercise1 {
 		.flatMap((id -> StreamSources.userStream().filter(u -> u.getId() == id)))
 		.map(m -> m.getLastName())
 		.forEach(v -> System.out.print(v + ", "));
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("Iterator example with Predicate java 9");
+		Predicate<Integer> predicate = n -> n < 100;
+		Stream.iterate(1, predicate, n -> n * 2)
+		.forEach(n -> System.out.print(n + " "));
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("Iterator example with limit Java 8");
+		Stream.iterate(1, n -> n * 2)
+		.limit(7)
+		.forEach(n -> System.out.print(n + " "));
 
 
     }
