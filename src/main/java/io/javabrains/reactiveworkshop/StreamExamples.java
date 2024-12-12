@@ -1,6 +1,8 @@
 package io.javabrains.reactiveworkshop;
 
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class StreamExamples {
 	
@@ -25,6 +27,24 @@ public class StreamExamples {
 		StreamSources.userStream()
 		.filter(u -> u.getLastName().contains("a"))
 		.forEach(u -> System.out.println( u));
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("Iterator example 1 java 9");
+		
+		Predicate<Integer> predicate = n -> n < 5;
+		Stream<Integer> finiteStream = Stream.iterate(1, predicate, n -> n + 1);
+		finiteStream
+		.forEach(System.out::println);
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("Iterator example 2 java 8");
+		
+		Stream<Integer> infiniteStreamLimit = Stream.iterate(1, n -> n +1).limit(5);
+		infiniteStreamLimit
+		.forEach(System.out::println);
+		
 	
 		
 				
