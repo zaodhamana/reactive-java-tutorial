@@ -1,5 +1,6 @@
 package io.javabrains.reactiveworkshop;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
@@ -44,6 +45,10 @@ public class StreamExamples {
 		Stream<Integer> infiniteStreamLimit = Stream.iterate(1, n -> n +1).limit(5);
 		infiniteStreamLimit
 		.forEach(System.out::println);
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("Various Stream Examples");
 		
 	
 		
