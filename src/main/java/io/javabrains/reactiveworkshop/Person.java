@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public record Person(String name, int age) implements Serializable {
 
@@ -14,7 +13,7 @@ public record Person(String name, int age) implements Serializable {
 	try {
 		Person s = new Person("Muhoro", 1);
 
-		
+		System.out.println("Print of record: " + s);
 		
 		File obj = new File("file1.txt");
 		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(obj));
